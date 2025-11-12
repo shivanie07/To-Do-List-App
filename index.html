@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list app</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>To-do List App</h1>
+        <section class="dark-mode-toggle">
+            <div class="slider-toggle" id="darkModeToggle"></div>
+            <span class="toggle-label">Dark Mode</span>
+        </section>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Welcome to Your Task Manager</h2>
+            <p>Stay organized and boost your productivity!</p>
+        </section>
+
+        <!-- Task Counter Section -->
+        <section id="taskCount">
+            Total:0, Completed:0, Pending:0
+        </section>
+
+
+        <!-- Task Input Form -->
+        <div class="task-form">
+            <section class="task-input">
+                <label for="taskInput" class="visually-hidden">New Task:</label>
+                <input type="text" id="taskInput" placeholder="Add a new task..." />
+
+                <button id="addTaskButton" aria-label="Add task">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </section>
+        </div>
+
+        <!--Task Controls Section-->
+        <section class="task-controls">
+
+            <label for="filterTasks" class="visually-hidden">Filter Tasks</label>
+            <select id="filterTasks">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+
+            <label for="searchtask" class="visually-hidden">Search Tasks</label>
+            <input type="text" id="searchTask" placeholder="Search tasks..." />
+
+        </section>
+
+        <!-- Task List Display -->
+        <section class="task-list" id="taskList">
+            <!-- Tasks will be dynamically added here -->
+            <ul id="taskList"></ul>
+        </section>
+
+        <!-- Edit Task Modal -->
+        <section id="editModal" class="modal" style="display: none;">
+            <section class="modal-content">
+                <label for="editTaskInput">Edit Task:</label>
+                <input type="text" id="editTaskInput" />
+
+                <section class="modal-actions">
+                    <button id="saveEditBtn">Save</button>
+                    <button id="cancelEditBtn">Cancel</button>
+                </section>
+            </section>
+        </section>
+        
+        <section class="btn" id="btngroup">
+            <div class="btn-group">
+                <button id="clear-all-btn">Clear All Tasks</button>
+                <button id="clearCompletedTasks">Clear Completed</button>
+            </div>
+        </section>
+
+        <!--Calendar Section-->
+        <section id="calendar">
+            <h2>Calendar</h2>
+            <div id="CalendarHeader"></div>
+            <div id="calendarGrid" class="calendar-grid"></div>
+        </section>
+
+        <!--Confirmation modal-->
+        <section class="modal" id="confirmModal">
+            <div class="modal-content">
+                <p id="confirmMessage">Are you sure you want to clear all tasks?</p>
+                <div class="modal-actions">
+                    <button id="confirmYes">Yes</button>
+                    <button id="confirmNo">No</button>
+                </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+@media (max-width: 768px) {
+
+    .task-input,
+    .task-form,
+    .task-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .task-input input,
+    .task-input select,
+    .task-input button {
+        width: 100%;
+    }
+
+    #addTaskbtn {
+        height: 45px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FBEDD6;
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+    line-height: 2;
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero {
+    background-color: #F9F3E7;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reminder-box,
+#task-counter,
+#calendar{
+    background-color: #F9F3E7;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+#calendar header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#calendar button {
+    background-color: #BF7E46;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#CalendarHeader button:hover {
+    background-color: #A76434;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.calendar-grid div {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.calendar-grid div:hover {
+    background-color: #FBEDD6;
+    transform: scale(1.05);
+}
+
+.calendar-grid .header {
+    font-weight: bold;
+    background-color: #BF7E46;
+    color: white;
+    cursor: default;
+}
+
+.calendar-grid .today {
+    background-color: #97C6E0;
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-grid .event {
+    background-color: #BF7E46;
+    color: white;
+}
+
+.calendar-grid .event.today {
+    background-color: #97C6E0;
+    border: 2px solid #BF7E46;
+}
+
+.calendar-grid .empty {
+    background-color: transparent;
+    cursor: default;
+}
+
+#task-reminder {
+    display: none;
+}
+
+#taskForm {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.task-input {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.task-input input:focus {
+    outline: none;
+    border: 2px solid #97C6E0;
+    transition: 0.3s;
+}
+
+#addTaskButton {
+    background-color: #BF7E46;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+#addTaskButton:hover {
+    background-color: #97C6E0;
+}
+
+.task-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.task-control input,
+.task-control select,
+.task-control button {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#clearSearchButton {
+    background-color: #BF7E46;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#clearSearchButton:hover {
+    background-color: #a96330;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-group button {
+    background-color: #BF7E46;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    max-width: 200px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-group button:hover {
+    background-color: #97C6E0;
+}
+
+#calendar {
+    background-color: #F9F3E7;
+    margin: auto;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.6;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal-content button {
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+body.dark-mode {
+    background-color: #5a5353;
+    color: #b19393;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode button {
+    background-color: #b999b7;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+body.dark-mode .task-list {
+    background-color: #111111;
+    border: 1px solid #444;
+}
+
+/* Dark mode toggle switch */
+.slider-toggle {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Knob */
+.slider-toggle::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 3px;
+    left: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/* Active state */
+.slider-toggle.active {
+    background-color: #4CAF50;
+}
+
+.slider-toggle.active::before {
+    transform: translateX(26px);
+}
