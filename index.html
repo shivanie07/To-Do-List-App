@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-do list app</title>
+    <title>To-Do List App</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,7 +13,7 @@
 <body>
     <!-- Header Section -->
     <header>
-        <h1>To-do List App</h1>
+        <h1>To-Do List App</h1>
         <section class="dark-mode-toggle">
             <div class="slider-toggle" id="darkModeToggle"></div>
             <span class="toggle-label">Dark Mode</span>
@@ -39,6 +39,8 @@
             <section class="task-input">
                 <label for="taskInput" class="visually-hidden">New Task:</label>
                 <input type="text" id="taskInput" placeholder="Add a new task..." />
+
+                <input type="date" id="dueDateInput" aria-label="Select due date">
 
                 <button id="addTaskButton" aria-label="Add task">
                     <i class="fas fa-plus"></i>
@@ -102,6 +104,7 @@
                     <button id="confirmYes">Yes</button>
                     <button id="confirmNo">No</button>
                 </div>
+            </div>     
         </section>
     </main>
 
