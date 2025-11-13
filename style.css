@@ -1,5 +1,4 @@
 @media (max-width: 768px) {
-
     .task-input,
     .task-form,
     .task-controls {
@@ -14,7 +13,7 @@
         width: 100%;
     }
 
-    #addTaskbtn {
+    #addTaskButton {
         height: 45px;
     }
 
@@ -45,10 +44,21 @@ header {
     align-items: center;
 }
 
-header.h1 {
+header h1 {
     font-size: 2.5rem;
     font-weight: bold;
     color: #333;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
 }
 
 .switch input {
@@ -73,7 +83,7 @@ main {
 
 .reminder-box,
 #task-counter,
-#calendar{
+#calendar {
     background-color: #F9F3E7;
     padding: 1rem;
     border-radius: 8px;
@@ -148,10 +158,6 @@ main {
 .calendar-grid .empty {
     background-color: transparent;
     cursor: default;
-}
-
-#task-reminder {
-    display: none;
 }
 
 #taskForm {
@@ -332,7 +338,6 @@ body.dark-mode .task-list {
     transition: background-color 0.3s;
 }
 
-/* Knob */
 .slider-toggle::before {
     content: '';
     position: absolute;
@@ -345,7 +350,6 @@ body.dark-mode .task-list {
     transition: transform 0.3s;
 }
 
-/* Active state */
 .slider-toggle.active {
     background-color: #4CAF50;
 }
