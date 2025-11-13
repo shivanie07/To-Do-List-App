@@ -16,10 +16,12 @@ It allows users to add, edit, delete, and mark tasks as complete, while storing 
 1. Add new tasks easily.
 2. Edit existing tasks.
 3. Mark tasks as complete.
-4. Delete unwanted tasks.
+4. Delete single or all tasks at once.
 5. Persist data using Local Storage.
 6. Fully responsive design for desktop and mobile.
-7. Input validation to prevent empty tasks.
+7. View due-date-based task highlights on a dynamic calendar. 
+8. Search tasks or filter by completion status.
+9. Toggle between light and dark themes with persistent user preference.  
 
 ## Setup Instructions
 1. Clone or download the repository:
