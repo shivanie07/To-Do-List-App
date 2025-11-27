@@ -23,7 +23,9 @@ It allows users to add, edit, delete, and mark tasks as complete, while storing 
 8. Search tasks or filter by completion status.
 9. Toggle between light and dark themes with persistent user preference.  
 
-## Setup Instructions
+## Setup & Execution
+live site link: https://shivanie07.github.io/To-Do-List-App/
+Local setup(Optional)
 1. Clone or download the repository:
    bash
    git clone https://github.com/shivanie07/To-Do-List-App
