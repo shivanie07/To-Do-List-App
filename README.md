@@ -25,6 +25,7 @@ It allows users to add, edit, delete, and mark tasks as complete, while storing 
 
 ## Setup & Execution
 live site link: https://shivanie07.github.io/To-Do-List-App/
+
 Local setup(Optional)
 1. Clone or download the repository:
    bash
